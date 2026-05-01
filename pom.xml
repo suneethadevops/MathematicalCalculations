@@ -110,7 +110,7 @@
         <!-- Snapshot Repository -->
         <snapshotRepository>
             <id>nexus-snapshots</id>
-            <url>http://65.0.69.107:8081/repository/ccit-snapshot/</url>
+            <url>http://65.0.69.107:8081/repository/ccit-repo/</url>
         </snapshotRepository>
     </distributionManagement>
 
