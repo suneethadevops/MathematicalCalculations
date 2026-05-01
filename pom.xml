@@ -104,7 +104,7 @@
         <!-- Release Repository -->
         <repository>
             <id>nexus-releases</id>
-            <url>http://65.0.69.107:8081/repository/ccit-repo/</url>
+            <url>http://65.0.69.107:8081</url>
         </repository>
     </distributionManagement>
 </project>
