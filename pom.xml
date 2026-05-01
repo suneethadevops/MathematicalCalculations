@@ -100,11 +100,10 @@
     </build>
 
     <!-- Nexus Configuration -->
-    <distributionManagement>
-        <!-- Release Repository -->
-        <repository>
-            <id>nexus-releases</id>
-            <url>65.0.69.107</url>
-        </repository>
-    </distributionManagement>
+<distributionManagement>
+    <repository>
+        <id>nexus-releases</id>
+        <url>http://65.0.69.107:8081/repository/ccit-repo/</url>
+    </repository>
+</distributionManagement>
 </project>
