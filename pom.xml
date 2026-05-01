@@ -104,7 +104,7 @@
         <!-- Release Repository -->
         <repository>
             <id>nexus-releases</id>
-            <url>http://65.0.69.107:8081</url>
+            <url>65.0.69.107</url>
         </repository>
     </distributionManagement>
 </project>
