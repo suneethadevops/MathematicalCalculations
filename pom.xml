@@ -98,6 +98,12 @@
 
         </plugins>
     </build>
-
+    <!-- Nexus Configuration -->
+<distributionManagement>
+    <repository>
+        <id>nexus-releases</id>
+        <url>http://65.1.128.69:8081/repository/ccit-repo/</url>
+    </repository>
+</distributionManagement>
 
 </project>
