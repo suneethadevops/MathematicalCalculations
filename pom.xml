@@ -97,7 +97,7 @@
     <distributionManagement>
         <repository>
             <id>nexus-releases</id>
-            <url>http://13.204.159.101:8081/repository/ccit-repo/</url>
+            <url>http://13.202.246.8:8081/repository/ccit-repo/</url>
         </repository>
     </distributionManagement>
 
