@@ -11,7 +11,7 @@
     <packaging>war</packaging>
 
     <name>ccitwebsite</name>
-    <description>Spring Boot WAR for external Tomcat</description>
+    <description>Spring Boot Executable WAR</description>
 
     <!-- Spring Boot Parent -->
     <parent>
@@ -28,31 +28,28 @@
     <!-- Dependencies -->
     <dependencies>
 
-        <!-- Spring Boot Web -->
+        <!-- Spring Boot Web (includes embedded Tomcat) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- External Tomcat (IMPORTANT) -->
+        <!-- IMPORTANT: Embedded Tomcat (NO provided scope) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
         </dependency>
 
-        <!-- JSP Support (Optional) -->
+        <!-- JSP (optional, keep if you use JSP) -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
         </dependency>
 
-        <!-- Servlet API -->
+        <!-- Servlet API (optional, usually not needed explicitly) -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
-            <scope>provided</scope>
         </dependency>
 
         <!-- Testing -->
@@ -70,13 +67,10 @@
 
         <plugins>
 
-            <!-- Disable Spring Boot fat WAR (IMPORTANT for Tomcat) -->
+            <!-- IMPORTANT: Enable executable WAR -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
             </plugin>
 
             <!-- WAR Plugin -->
@@ -98,12 +92,13 @@
 
         </plugins>
     </build>
+
     <!-- Nexus Configuration -->
-<distributionManagement>
-    <repository>
-        <id>nexus-releases</id>
-        <url>http://13.204.159.101:8081/repository/ccit-repo/</url>
-    </repository>
-</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://13.204.159.101:8081/repository/ccit-repo/</url>
+        </repository>
+    </distributionManagement>
 
 </project>
